@@ -272,7 +272,7 @@ JL_DLLEXPORT int jl_stored_inline(jl_value_t *eltype) JL_NOTSAFEPOINT
     return jl_islayout_inline(eltype, &fsz, &al);
 }
 
-// whether this type is unique'd by pointer
+// whether instances of this type can use pointer comparison for `===`
 int jl_pointer_egal(jl_value_t *t)
 {
     if (t == (jl_value_t*)jl_any_type)
